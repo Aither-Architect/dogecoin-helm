@@ -33,20 +33,30 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          # command: ["/bin/cat"]
+          # args: ["/dev/random"]
+          volumeMounts:
+          - name: config-volume
+            mountPath: /etc/dogecoin.conf
+            subPath: dogecoin.conf
           ports:
-            - name: http
-              containerPort: 80
+            - name: dogecoind
+              containerPort: 22556
               protocol: TCP
           livenessProbe:
-            httpGet:
-              path: /
-              port: http
+            initialDelaySeconds: 600
+            tcpSocket:
+              port: dogecoind
           readinessProbe:
-            httpGet:
-              path: /
-              port: http
+            initialDelaySeconds: 600
+            tcpSocket:
+              port: dogecoind
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+      volumes:
+      - name: config-volume
+        configMap:
+          name: dogecoin-config
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
