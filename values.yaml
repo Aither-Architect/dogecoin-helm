@@ -10,6 +10,10 @@ dogecoinConf:
   rpcpassword: muchNodePassword
   disablewallet: 1
   maxconnections: 64
+  addnode: doge1-eu.langerhans.de
+  addnode: doge2-eu.langerhans.de
+  addnode: doge3-eu.langerhans.de
+  addnode: doge4-eu.langerhans.de
 
 image:
   repository: "aitherarchitect/dogecoin"
