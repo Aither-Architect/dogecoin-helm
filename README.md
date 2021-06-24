@@ -1,6 +1,6 @@
 # DogecoinD Helm Chart
 
-This is a [Helm Chart](https://helm.sh/) to deploy a dogecoind full node into a [Kubernetes](https://kubernetes.io/) cluster. This chart is designed specifically with [this Docker image](https://github.com/Aither-Architect/dogecoin-docker) in mind, which is a multi-arch image supporting:
+This is a [Helm Chart](https://helm.sh/) to deploy a dogecoind full node into a [Kubernetes](https://kubernetes.io/) cluster. This chart is designed specifically with [this multi-arch Docker image](https://github.com/Aither-Architect/dogecoin-docker) in mind, supporting:
 - x86_64
 - arm64 / armv8 / aarch64
 
