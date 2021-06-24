@@ -19,6 +19,11 @@ This chart is undergoing active development and will have more features exposed 
 ## CONTRIBUTING
 Pull requests are welcome! Just fork the repo and cut a branch with a semantic name. Make your changes and then cut a PR back here to the `main` branch.
 
+### Targeted K8s platforms (for now):
+- AWS/EKS (next)
+- DigitalOcean
+- Raspberry Pi 4 Model B running K3s
+- 
 ## TODO -
 - Back the pod's data with a volume by turning the Deployment into a StatefulSet
 - Determine best practices on how to join the network, dns-wise
@@ -28,7 +33,3 @@ Pull requests are welcome! Just fork the repo and cut a branch with a semantic n
 - Set up automated testing in CircleCI
 - Assess what is needed to evolve Dogecoin into a Cloud Native architecture to cultivate opportunities for features
 
-### Targeted K8s platforms (for now):
-- AWS/EKS (next)
-- DigitalOcean
-- Raspberry Pi 4 Model B running K3s
