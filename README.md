@@ -31,4 +31,4 @@ Pull requests are welcome! Just fork the repo and cut a branch with a semantic n
 ### Targeted K8s platforms (for now):
 - AWS/EKS (next)
 - DigitalOcean
-- Raspberry Pi 4 Model B
+- Raspberry Pi 4 Model B running K3s
